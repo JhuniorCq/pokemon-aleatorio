@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* overflow-y: hidden; */
+    height: 100vh;
+    background-image: url(assets/img/rayquaza.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 100vw 100vh; */
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /*Borde Inferior con SOMBRA*/
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    /* margin-top: 5%; */
+    margin: 5% 0;
+    width: 60vw;
+    /* border: 1px solid yellow; */
+    border-radius: 15px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.4rem);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.seccion { /*Cada <section>*/
+    /* border: 1px solid black; */
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+}
+
+.seccion h2 {
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.seccion:not(h2) {
+    color: #FFFFFF;
+}
+
+.formulario {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+.contenedor-opciones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.opcion-configurar {
+    /* border: 1px solid red; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcion-configurar label {
+    margin-bottom: 15px;
+}
+
+#cantidad, #tipo {
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.input {
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.input:hover {
+    background-color: black;
+    color: white;
+}
+
+.contenedor-boton {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#generar-pokemon {
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    /* font-weight: bold; */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+#generar-pokemon:hover {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+#pokemon-aleatorios {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.un-pokemon {
+    display: inline-flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.pokemon-imagen {
+    width: 100%;
+}
+
+.pokemon-nombre {
+    text-align: center;
+    text-transform: capitalize;
+    color :orange
+}
+
+footer {
+    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+    padding: 20px 0;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
+}

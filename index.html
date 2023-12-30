@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokemon Aleatorio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!-- <li><a href="#"><img src="assets/img/logo-pokemon.png" alt="Logo Pokemón" id="logo"></a></li> -->
+                <li><a href="index.html"><h1>Pokemón Aleatorios</h1></a></li>
+            </nav>            
+        </header>
+        <main>
+            <div class="contenedor">
+                <section class="seccion">
+                    <h2>¿Cómo Generar tu Equipo Pokemón?</h2>
+                    <p>
+                        En esta sección podrás generar un Equipo Pokemon de manera aleatoria. Solo elige la cantidad y tipo de Pokemon que deseas para tu equipo, y dale click a "Generar Pokemon". La página te propondra algunos Pokémon elegidos al azar los cuales puedes considerar para una nueva partida de un juego Pokemon, un nuzlocke, o lo que desees.
+                    </p>
+                </section>
+                
+                <section class="seccion">
+                    <h2>Genera tu Equipo Pokemón</h2>
+                    <form class="formulario">
+                        <div class="contenedor-opciones">
+                            <div class="opcion-configurar">
+                                <label for="cantidad">Cantidad de Pokemón:</label>
+                                <select name="Cantidad" id="cantidad" class="input">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6" selected>6</option>
+                                </select>
+                            </div>
+                            
+                            <div class="opcion-configurar">
+                                <label for="tipo">Tipo:</label>
+                                <select name="tipo" id="tipo" class="input">
+                                    <option value="cualquiera" selected>Cualquier tipo</option>
+                                    <option value="steel">Acero</option>
+                                    <option value="water">Agua</option>
+                                    <option value="bug">Bicho</option>
+                                    <option value="dragon">Dragón</option>
+                                    <option value="electric">Eléctrico</option>
+                                    <option value="ghost">Fantasma</option>
+                                    <option value="fire">Fuego</option>
+                                    <option value="fairy">Hada</option>
+                                    <option value="ice">Hielo</option>
+                                    <option value="fighting">Lucha</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="grass">Planta</option>
+                                    <option value="psychic">Psíquico</option>
+                                    <option value="rock">Roca</option>
+                                    <option value="dark">Siniestro</option>
+                                    <option value="ground">Tierra</option>
+                                    <option value="poison">Veneno</option>
+                                    <option value="flying">Volador</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="contenedor-boton"><button type="button" id="generar-pokemon">Generar Pokemon</button></div>
+                    </form>
+                </section>
+    
+                <section class="seccion" id="seccion-aleatorios">
+                    <h2>Este será tu Equipo Pokemón</h2>
+                    <div id="contenedor-pokemon">
+                        <p id="aviso-pokemon">Aquí se mostrará su Equipo Pokemón luego de que los genere.</p>
+                        <div id="pokemon-aleatorios">
+                            <!-- Estos div de "un-pokemon" NO existirán aún -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>Derechos reservados &copy; 2023</p>
+        </footer>
+
+        <!-- CDN para usar AXIOS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="app.js" type="module"></script>
+    </body>
+</html>
+
