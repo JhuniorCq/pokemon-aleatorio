@@ -62,7 +62,6 @@ const filtrarPokemon = async (tipo) => {
                 const datosPokemon = await extraerPokemon(numero);
                 pokemonFiltrados.push(datosPokemon);
             }
-
         }
 
         console.log('Pokemon Filtrados: ', pokemonFiltrados) // se filtran correctamente
