@@ -135,23 +135,25 @@ const mostrarPokemon = async (evento) => {
     }
 }
 
+const valoresUsuario = (evento) => {
+    console.log(`Valor luego de click: ${inputColeccion[0].value}`);
+    
+    const valorID = evento.target.id;
+
+    console.log(`Nombre ID del Elemento Seleccionado: ${evento.target.id}`);
+
+    if(valorID === 'cantidad') {
+        conjuntoValores[0] = inputColeccion[0].value;
+    } else if (valorID === 'tipo') {
+        conjuntoValores[1] = inputColeccion[1].value;
+    }
+
+    console.log(`Valores Finales: ${conjuntoValores}`);
+}
+
 //.ADDEVENTLISTENER()
 for(const input of inputColeccion) {
-    input.addEventListener('change', (evento) => {
-        console.log(`Valor luego de click: ${input.value}`);
-    
-        const valorID = evento.target.id;
-    
-        console.log(`Nombre ID del Elemento Seleccionado: ${evento.target.id}`);
-    
-        if(valorID === 'cantidad') {
-            conjuntoValores[0] = input.value;
-        } else if (valorID === 'tipo') {
-            conjuntoValores[1] = input.value;
-        }
-
-        console.log(`Valores Finales: ${conjuntoValores}`);
-    });
+    input.addEventListener('change', valoresUsuario)
 }
 
 botonGenerar.addEventListener('click', mostrarPokemon);
