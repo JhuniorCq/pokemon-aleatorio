@@ -11,7 +11,7 @@ let conjuntoValores = [inputColeccion[0].value, inputColeccion[1].value];
 console.log(`Valores Iniciales: ${conjuntoValores}`);
 
 
-const pokemonAleatorios = (cantidad = 6, arrayPokemon) => {//ESTA FUNCIÓN DEBE GENERAR POKEMONS ALEATORIOS DE LOS FILTRADOS
+const pokemonAleatorios = (cantidad = 6, arrayPokemon) => {//ESTA FUNCIÓN DEBE GENERAR POKEMONS ALEATORIOS DE LOS FILTRADOS O DE TODOS LOS POKEMON
 
     const cantidadPokemon = arrayPokemon.length;
     const rangoMaximo = cantidadPokemon - 1;
@@ -83,17 +83,11 @@ const generarPokemons = async () => {
         for(let i=0; i<1008; i++) {
             const numero = String(i+1);
             todosPokemon.push(await extraerPokemon(numero)); //Devuelve los Datos de un Pokemon
-            // const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${numero}`);
-            // const datosPokemon = response.data;
-            // todosPokemon.push(datosPokemon);
         }
 
         const pokemonAleatoriosArray = pokemonAleatorios(cantidadPokemon, todosPokemon) //Array de pokemon aleatorios
         const nombresPokemonAleatorios = pokemonAleatoriosArray.map(datosUnPokemon => datosUnPokemon.forms[0].name);
         const urlPokemonAleatorios = pokemonAleatoriosArray.map(datosUnPokemon => datosUnPokemon.sprites.other["official-artwork"].front_default);
-        
-        console.log(nombresPokemonAleatorios);
-        console.log(urlPokemonAleatorios);
 
         return {
             nombresPokemonAleatorios,
@@ -107,9 +101,6 @@ const generarPokemons = async () => {
         const nombresPokemonAleatorios = pokemonAleatoriosArray.map(datosUnPokemon => datosUnPokemon.forms[0].name);
         const urlPokemonAleatorios = pokemonAleatoriosArray.map(datosUnPokemon => datosUnPokemon.sprites.other["official-artwork"].front_default);
 
-        console.log(nombresPokemonAleatorios);
-        console.log(urlPokemonAleatorios);
-
         return {
             nombresPokemonAleatorios,
             urlPokemonAleatorios
@@ -117,7 +108,6 @@ const generarPokemons = async () => {
     }
 
 }
-
 
 const mostrarPokemon = async (evento) => {
     const {nombresPokemonAleatorios, urlPokemonAleatorios} = await generarPokemons(); //Devuelve 2 ARRAYS
