@@ -109,6 +109,9 @@ const generarPokemons = async () => {
 }
 
 const mostrarPokemon = async (evento) => {
+
+    console.log('Ya mostraré a los pokemon')
+
     const {nombresPokemonAleatorios, urlPokemonAleatorios} = await generarPokemons(); //Devuelve 2 ARRAYS
     const pokemonAleatorios = document.getElementById('pokemon-aleatorios');
     const cantidadPokemon = nombresPokemonAleatorios.length;
