@@ -121,6 +121,8 @@ const mostrarPokemon = async (evento) => {
 
     avisoMostrarPokemon.style.display = 'none';
 
+    console.log('Ya mostraré a los pokemon x2')
+
     for(let i=0; i<cantidadPokemon; i++) {
         const div = document.createElement('div');
         pokemonAleatorios.append(div);
